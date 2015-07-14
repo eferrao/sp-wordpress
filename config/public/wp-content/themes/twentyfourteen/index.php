@@ -14,29 +14,50 @@
  * @since Twenty Fourteen 1.0
  */
 
-<? php get_header(); ?>
+get_header(); ?>
 
-if (have_posts()) :      while (have_posts()) : the_post(); ?>
+<div id="main-content" class="main-content">
 
-    <article class = "post">                   
-    	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>
-    	</a></h2>
-		
-		<font color = #FAED39> 
-		<p class ="post-info"><?php the_time('F j, Y g:i a'); ?> | by <a
-		href="<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author();
+<?php
+	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
+		// Include the featured content template.
+		get_template_part( 'featured-content' );
+	}
+?>
 
-		?></a></p></font> 
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
 
-        <?php the_content(); ?>      
-    </article>
+		<?php
+			if ( have_posts() ) :
+				// Start the Loop.
+				while ( have_posts() ) : the_post();
 
-	<?php endwhile;?>
+					/*
+					 * Include the post format-specific template for the content. If you want to
+					 * use this in a child theme, then include a file called called content-___.php
+					 * (where ___ is the post format) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
 
-	else :  echo '<p>No content found</p>';
 
-	endif;
-	
+				endwhile;
+				// Previous/next post navigation.
+				twentyfourteen_paging_nav();
+
+			else :
+				// If no content, include the "No posts found" template.
+				get_template_part( 'content', 'none' );
+
+			endif;
+		?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	<?php get_sidebar( 'content' ); ?>
+</div><!-- #main-content -->
 
 
-<? php get_footer(); ?>  php get_sidebar(); ?>
+<?php
+get_sidebar();
+get_footer();
