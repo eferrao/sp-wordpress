@@ -12,15 +12,7 @@
 	<?php twentyfourteen_post_thumbnail(); ?>
 
 	<div class="yesworld">
-		<?php
-
-
-			if ( 'post' == get_post_type() )
-				twentyfourteen_author(); 
-				twentyfourteen_posted_on();
-
-			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-		?>
+		<?php twentyfourteen_posted_on(); ?>
 	</div><!-- .entry-header -->
 
 	<div class="entry-content">
