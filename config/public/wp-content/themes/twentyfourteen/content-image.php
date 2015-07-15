@@ -11,6 +11,20 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php twentyfourteen_post_thumbnail(); ?>
 
+		<header class="entry-header">
+		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
+		<div class="entry-meta">
+			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
+		</div><!-- .entry-meta -->
+
+		<div class="entry-meta">
+			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+
+			<!-- <?php twentyfourteen_posted_on(); ?> --> 
+
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
@@ -38,9 +52,9 @@
 			endif;
 
 			if ( is_single() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h3 class="entry-title">', '</h3>' );
 			else :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			endif;
 		?>
 
@@ -49,9 +63,9 @@
 				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
 			</span>
 
-			<?php twentyfourteen_posted_on(); ?>
 
             <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment',
 			'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>             <?php endif; ?>
 
