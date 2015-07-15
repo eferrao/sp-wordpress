@@ -11,14 +11,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php twentyfourteen_post_thumbnail(); ?>
 
-	<header class="entry-head">
-				<div class="entry-meta">
-			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+	<div class="entry-head">
 
-			<!-- <?php twentyfourteen_posted_on(); ?> --> 
-
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+	</div><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
