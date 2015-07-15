@@ -30,7 +30,10 @@
 
 		<div class="entry-meta">
 			<?php
+
+
 				if ( 'post' == get_post_type() )
+					twentyfourteen_author(); 
 					twentyfourteen_posted_on();
 
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
