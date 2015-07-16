@@ -10,6 +10,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
+	<?php
+
+	if (is_home()) {
+		the_content('php is_home works');
+	}
+
+	elseif (is_front_page()) {
+		the_content('php is_front_page works');
+	}
+
+	if (is_single()) {
+		the_content('php is_single works');
+	}
+	?> 
+
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<!-- <div class="entry-meta">
