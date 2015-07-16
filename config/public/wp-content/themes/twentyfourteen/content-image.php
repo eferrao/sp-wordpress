@@ -18,7 +18,7 @@
 
 	if (is_home()) {
 		print_r($homeresponse); 
-		echo(the_title( '<h5 class="entry-title">', '</h5>' )
+		
 	}
 
 	if (is_front_page()) {
