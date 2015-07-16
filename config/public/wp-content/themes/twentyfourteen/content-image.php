@@ -48,7 +48,9 @@
 		?>
 
 		<div class="entry-meta">
-			
+			<span class="post-format">
+				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
+			</span>
 
 
             <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
@@ -77,10 +79,6 @@
 				'link_after'  => '</span>',
 			) );
 		?>
-		<span class="post-format">
-			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
-		</span>
-
 	</div><!-- .entry-content -->
 
 	
