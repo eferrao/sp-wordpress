@@ -12,16 +12,20 @@
 
 	<?php
 
+	$homeresponse = array('is_home' => 'is_home works'); 
+	$frontpgresponse = array('is_front' => 'front_page works'); 
+	$singleresponse = array('is_single' => 'single works'); 
+
 	if (is_home()) {
-		the_content('php is_home works');
+		print_r($homeresponse); 
 	}
 
 	elseif (is_front_page()) {
-		the_content('php is_front_page works');
+		print_r($frontpgresponse); 
 	}
 
 	if (is_single()) {
-		the_content('php is_single works');
+		print_r($singleresponse);
 	}
 	?> 
 
