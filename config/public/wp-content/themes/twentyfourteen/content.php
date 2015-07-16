@@ -30,8 +30,6 @@
 
 		<div class="entry-meta">
 			<?php
-
-
 				if ( 'post' == get_post_type() )
 					twentyfourteen_author(); 
 					twentyfourteen_posted_on();
