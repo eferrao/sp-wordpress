@@ -18,7 +18,7 @@
 
 	if (is_home()) {
 		print_r($homeresponse); 
-		print_r(get_the_tags());
+		print_r(get_the_tags();
 	}
 
 	if (is_front_page()) {
@@ -47,19 +47,7 @@
 			endif;
 		?>
 
-		<div class="entry-meta">
-			<span class="post-format">
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
-			</span>
-
-
-            <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment',
-			'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>             <?php endif; ?>
-
-			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="editing-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
+		
 	</header><!-- .entry-header -->
 	
 
@@ -79,6 +67,20 @@
 				'link_after'  => '</span>',
 			) );
 		?>
+
+		<div class="entry-meta">
+			<span class="post-format">
+				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
+			</span>
+
+
+            <?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment',
+			'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>             <?php endif; ?>
+
+			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="editing-link">', '</span>' ); ?>
+		</div><!-- .entry-meta -->
 	</div><!-- .entry-content -->
 
 	
