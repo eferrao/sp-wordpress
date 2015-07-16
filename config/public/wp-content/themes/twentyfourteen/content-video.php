@@ -26,19 +26,6 @@
 			endif;
 		?>
 
-		<div class="entry-meta">
-			<span class="post-format">
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>"><?php echo get_post_format_string( 'video' ); ?></a>
-			</span>
-
-			<?php twentyfourteen_posted_on(); ?>
-
-			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
-			<?php endif; ?>
-
-			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -56,6 +43,20 @@
 				'link_after'  => '</span>',
 			) );
 		?>
+
+		<div class="entry-meta">
+			<span class="post-format">
+				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>"><?php echo get_post_format_string( 'video' ); ?></a>
+			</span>
+
+			<?php twentyfourteen_posted_on(); ?>
+
+			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+			<?php endif; ?>
+
+			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
+		</div><!-- .entry-meta -->
 	</div><!-- .entry-content -->
 
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
