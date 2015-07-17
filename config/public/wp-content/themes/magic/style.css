@@ -1,0 +1,32 @@
+/* 
+	Theme Name: Magic 
+	Theme URI: http://stylepulse.co
+	Version: 1.0
+*/ 
+
+body {
+	background: silver;
+	font: 16px ariel, sans-serif; 
+}
+
+#container {
+	width: 400px; 
+	margin: 0 auto; 
+	background: #fff; 
+	border-radius: 14px; 
+	padding: 14px; 
+}
+
+footer {
+	width: 400px; 
+	margin: 0 auto; 
+	background: #fff; 
+	border-radius: 14px; 
+	padding: 20px; 
+}
+
+#sidebar {
+	border: 3px solid red;
+	float: right; 
+	width: 100px; 
+}
