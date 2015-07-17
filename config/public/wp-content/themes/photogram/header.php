@@ -56,7 +56,7 @@
 $featured = new WP_Query(array('post__in' => get_option('sticky_posts'), 'ignore_sticky_posts' => 1));
 if ($featured->have_posts()) :
 ?>
-<!--
+
 <section class="featured-slider container">
   <div class='row'>
   <div class="slider-container">
@@ -84,8 +84,7 @@ if ($featured->have_posts()) :
     ?>
 	
   </div>
-  .slider-container -->
-  <!--
+  <!-- .slider-container -->
   </div>
   
   <div class="slider-dir-nav row">
@@ -93,10 +92,11 @@ if ($featured->have_posts()) :
     <a href="#" class="next"></a>
   </div>
   <div class="slider-nav row"></div>
-</section>       .featured-slider -->
- 
+</section><!-- .featured-slider -->
+
 <?php 
-//endif;} 
+endif;
+} 
 ?>
 
 <div class="main-container container">
