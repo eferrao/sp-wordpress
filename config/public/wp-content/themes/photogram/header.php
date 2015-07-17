@@ -52,52 +52,6 @@
   </div>
 </header><!-- .header -->
 
-<?php if(is_home()){ 
-$featured = new WP_Query(array('post__in' => get_option('sticky_posts'), 'ignore_sticky_posts' => 1));
-if ($featured->have_posts()) :
-?>
-
-<section class="featured-slider container">
-  <div class='row'>
-  <div class="slider-container">
-    <?php 
-				
-		while ($featured->have_posts()) : $featured->the_post(); if(colabs_image('link=img&return=true')==null) continue;
-		$image = colabs_image('width=55&height=55&return=true');
-		$pattern = '/src="([^"]*)"/';
-		preg_match($pattern, $image, $matches);
-		$src = $matches[1];
-		unset($matches);
-		echo'
-			<div class="slider-slide" data-thumbnail="'.$src.'">
-			  <div class="slider-image">
-				'.colabs_image('width=563&height=370&return=true').'
-			  </div>
-			  <div class="slider-text">
-				<h2 class="slider-title"><a href="'.get_permalink().'">'.get_the_title().'</a></h2>
-				<p>'.home_excerpt().'</p>
-			  </div>
-			</div><!-- .slider-slide -->
-		';
-		endwhile;
-		wp_reset_postdata();
-    ?>
-	
-  </div>
-  <!-- .slider-container -->
-  </div>
-  
-  <div class="slider-dir-nav row">
-    <a href="#" class="prev"></a>
-    <a href="#" class="next"></a>
-  </div>
-  <div class="slider-nav row"></div>
-</section><!-- .featured-slider -->
-
-<?php 
-endif;
-} 
-?>
 
 <div class="main-container container">
   <div class="row">
