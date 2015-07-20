@@ -12,20 +12,7 @@
 		<header class="entry-header">
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
-					<div class = "entry-foot">
-						<?php if ( is_object_in_taxonomy( get_post_type(), 'category' ) ) : // Hide category text when not supported ?>
-						<?php
-							/* translators: used between list items, there is a space after the comma */
-							$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
-							if ( $categories_list ):
-						?>
-						<span class="cat-links">
-							<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
-							$show_sep = true; ?>
-						</span>
-					</div>
-					<?php wp_get_post_categories( $post_id, $args ); ?> 
-					<h1> Yes world</h1> 
+					
 					<span class="cat-links">
 						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
 						$show_sep = true; ?>
