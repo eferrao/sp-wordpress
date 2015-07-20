@@ -19,14 +19,9 @@
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<?php endif; ?>
 
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php twentyeleven_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
 
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
-			<div class="comments-link" id = "commentsBlurb">
+			<div class="comments-link" id = "comments">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Reply', 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
 			</div>
 			<?php endif; ?>
