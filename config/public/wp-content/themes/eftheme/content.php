@@ -12,7 +12,7 @@
 		<header class="entry-header">
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
-					<div class = "entry-footer">
+					<div class = "entry-foot">
 						<?php if ( is_object_in_taxonomy( get_post_type(), 'category' ) ) : // Hide category text when not supported ?>
 						<?php
 							/* translators: used between list items, there is a space after the comma */
@@ -56,7 +56,7 @@
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
-		
+
 
 		<footer class="entry-meta">
 			<?php $show_sep = false; ?>
