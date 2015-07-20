@@ -69,6 +69,29 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
+	
+	<?php
+
+	$homeresponse = array('is_home' => 'is_home works'); 
+	$frontpgresponse = array('is_front' => 'front_page works'); 
+	$singleresponse = array('is_single' => 'single works'); 
+
+	if (is_home()) {
+		print_r($homeresponse); 
+		print_r(get_the_tags();
+	}
+
+	if (is_front_page()) {
+		print_r($frontpgresponse); 
+		print_r(get_the_tags());
+	}
+
+	if (is_single()) {
+		print_r($singleresponse);
+		print_r(get_the_tags());
+	}
+	?> 
+	
 	<header id="branding" role="banner">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
