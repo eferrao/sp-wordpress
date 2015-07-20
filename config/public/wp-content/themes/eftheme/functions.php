@@ -94,9 +94,6 @@ function twentyeleven_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
 
-	// Add support for a variety of post formats
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
-
 	$theme_options = twentyeleven_get_theme_options();
 	if ( 'dark' == $theme_options['color_scheme'] )
 		$default_background_color = '1d1d1d';

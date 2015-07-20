@@ -12,10 +12,6 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" role="contentinfo">
-
-
-	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 </body>
