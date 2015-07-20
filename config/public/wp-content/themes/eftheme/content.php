@@ -23,11 +23,7 @@
 			<?php endif; ?>
 
 
-			<?php if ( comments_open() && ! post_password_required() ) : ?>
-			<div class="comments-link" id = "comments">
-				<?php comments_popup_link( '<span class="litwol1 leave-reply">' . __( 'Reply', 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
-			</div>
-			<?php endif; ?>
+
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -55,6 +51,16 @@
 			</span>
 			<?php endif; // End if categories ?>
 			<?php endif; // End if is_object_in_taxonomy( get_post_type(), 'category' ) ?>
+			
+
+			<?php if ( comments_open() && ! post_password_required() ) : ?>
+			<div class="comments-link" id = "comments">
+				<?php comments_popup_link( '<span class="litwol1 leave-reply">' . __( 'Reply', 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
+			</div>
+			<?php endif; ?>
+
+
+
 			<?php if ( is_object_in_taxonomy( get_post_type(), 'post_tag' ) ) : // Hide tag text when not supported ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
