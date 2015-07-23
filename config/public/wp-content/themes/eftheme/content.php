@@ -14,15 +14,14 @@
 			<hgroup>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 				<h3 class="entry-format"><?php _e( 'Image', 'twentyeleven' ); ?></h3>
+				<?php 
+					if is_home() {print_r ("<h2>'this is home'</h2>"); echo "<h2>this is hme</h2>"; } 
+					if is_front_page() {print_r ("<h2>'this is front page'</h2>"); echo "<h2>this is frontpg</h2>"; } 
+				?>
+
 			</hgroup>
 
-			<?php 
-				$homepage = "this is home"; 
-				$frontpage = "this is front page"; 
-				if is_home() {echo "<h2>$homepage</h2>";} 
-				if is_front_page() {echo "h2>$frontpage</h2>";} 
-			?> 
-
+			
 
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
