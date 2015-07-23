@@ -11,12 +11,6 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<?php 
-			$homepage = "this is home"; 
-			$frontpage = "this is front page"; 
-			if is_home {echo "<h2>$homepage</h2>";} 
-			if is_front_page{echo "h2>$frontpage</h2>";} ?> 
-
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
 					<?php wp_get_post_categories( $post_id, $args ); ?> 
@@ -24,7 +18,6 @@
 					<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
 				</hgroup>
 			<?php else : ?>
-			
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<?php endif; ?>
 
@@ -42,8 +35,6 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
-
-
 
 		<footer class="entry-meta">
 			<?php $show_sep = false; ?>
