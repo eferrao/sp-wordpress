@@ -21,7 +21,7 @@ get_header(); ?>
 				</nav><!-- #nav-single -->
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
+						<header class="entry-header elifer7">
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 
 							<div class="entry-meta">

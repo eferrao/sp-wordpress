@@ -46,14 +46,14 @@ get_header(); ?>
 						get_template_part( 'content', get_post_format() );
 					?>
 
-				<?php endwhile; ?>
+				<?php endwhile; ?> 
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
+					<header class="entry-header elifer1">
 						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
 					</header><!-- .entry-header -->
 

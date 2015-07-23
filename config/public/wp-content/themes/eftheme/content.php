@@ -10,7 +10,7 @@
 
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
+		<header class="entry-header elifer6">
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
 					<?php wp_get_post_categories( $post_id, $args ); ?> 
