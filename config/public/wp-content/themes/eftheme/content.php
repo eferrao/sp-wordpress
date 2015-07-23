@@ -18,7 +18,7 @@
 					if ( $categories_list ):
 				?>
 				<span class="cat-links">
-					<?php printf(strtoupper( __( '<span class="%1$s">Posted inside</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
+					<?php printf( __( '<span class="%1$s">Posted inside</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list ); ?>
 				</span>
 				<?php endif; // End if categories ?>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
