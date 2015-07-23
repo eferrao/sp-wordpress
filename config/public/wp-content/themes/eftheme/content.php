@@ -11,6 +11,9 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<?php is_home(print_r("this is home");) ?> 
+			<?php is_front_page(print_r("this is the front page");) ?> 
+
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
 					<?php wp_get_post_categories( $post_id, $args ); ?> 
@@ -25,7 +28,6 @@
 
 		</header><!-- .entry-header -->
 
-		
 
 		<footer class="entry-meta">
 			<?php $show_sep = false; ?>
