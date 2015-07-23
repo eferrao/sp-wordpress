@@ -16,14 +16,13 @@
 				<?php 
 					$homepage = "this is home"; 
 					$frontpage = "this is front page"; 
-					if (is_home()) {echo "<h2>$homepage</h2>";} 
-					else (is_front_page()) {echo "h2>$frontpage</h2>";} 
-
+					if is_home {echo "<h2>$homepage</h2>";} 
+					if is_front_page{echo "h2>$frontpage</h2>";} 
 				?> 
 
 				<hgroup>
 					<?php wp_get_post_categories( $post_id, $args ); ?> 
-					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+					<h2 class="entry-title elifer2"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
 				</hgroup>
 
@@ -31,8 +30,8 @@
 				<?php 
 					$homepage = "this is home"; 
 					$frontpage = "this is front page"; 
-					if (is_home()) {echo "<h2>$homepage</h2>";} 
-					else (is_front_page()) {echo "h2>$frontpage</h2>";} 
+					if is_home {echo "<h2>$homepage</h2>";} 
+					if is_front_page{echo "h2>$frontpage</h2>";} 
 				?>
 
 			<h1 class="entry-title elifer2"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
