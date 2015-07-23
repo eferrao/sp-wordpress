@@ -10,15 +10,6 @@
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'indexed' ); ?>>
-		<?php
-					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
-					if ( $categories_list ):
-				?>
-				<span class="cat-links">
-					<?php printf( __( '<span class="%1$s">Posted outside</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list ); ?>
-				</span>
-				<?php endif; // End if categories ?>
 		<header class="entry-header elifer4">
 			<hgroup>
 				<?php
@@ -27,7 +18,7 @@
 					if ( $categories_list ):
 				?>
 				<span class="cat-links">
-					<?php printf( __( '<span class="%1$s">Posted inside</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list ); ?>
+					<?php printf(strtoupper( __( '<span class="%1$s">Posted inside</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
 				</span>
 				<?php endif; // End if categories ?>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -61,15 +52,7 @@
 				?>
 			</div><!-- .entry-meta -->
 			<div class="entry-meta">
-				<?php
-					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
-					if ( $categories_list ):
-				?>
-				<span class="cat-links">
-					<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list ); ?>
-				</span>
-				<?php endif; // End if categories ?>
+				
 				<?php
 					/* translators: used between list items, there is a space after the comma */
 					$tags_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
