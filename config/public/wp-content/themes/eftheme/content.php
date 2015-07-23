@@ -11,8 +11,12 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<?php is_home(print_r("this is home");) ?> 
-			<?php is_front_page(print_r("this is the front page");) ?> 
+			<?php 
+			$homepage = "this is home"; 
+			$frontpage = "this is front page"; 
+			if is_home {echo "<h2>$homepage</h2>";} 
+			if is_front_page{echo "h2>$frontpage</h2>";} 
+			?> 
 
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
