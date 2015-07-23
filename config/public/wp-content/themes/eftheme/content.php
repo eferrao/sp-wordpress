@@ -16,6 +16,14 @@
 				<h3 class="entry-format"><?php _e( 'Image', 'twentyeleven' ); ?></h3>
 			</hgroup>
 
+			<?php 
+				$homepage = "this is home"; 
+				$frontpage = "this is front page"; 
+				if is_home() {echo "<h2>$homepage</h2>";} 
+				if is_front_page() {echo "h2>$frontpage</h2>";} 
+			?> 
+
+
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
 				<?php comments_popup_link( '<span class="litwol3 leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
