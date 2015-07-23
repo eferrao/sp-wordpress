@@ -16,8 +16,9 @@
 				<?php 
 					$homepage = "this is home"; 
 					$frontpage = "this is front page"; 
-					if is_home {echo "<h2>$homepage</h2>";} 
-					if is_front_page{echo "h2>$frontpage</h2>";} 
+					if (is_home()) {echo "<h2>$homepage</h2>";} 
+					else (is_front_page()) {echo "h2>$frontpage</h2>";} 
+
 				?> 
 
 				<hgroup>
@@ -30,8 +31,8 @@
 				<?php 
 					$homepage = "this is home"; 
 					$frontpage = "this is front page"; 
-					if is_home {echo "<h2>$homepage</h2>";} 
-					if is_front_page{echo "h2>$frontpage</h2>";} 
+					if (is_home()) {echo "<h2>$homepage</h2>";} 
+					else (is_front_page()) {echo "h2>$frontpage</h2>";} 
 				?>
 
 			<h1 class="entry-title elifer2"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
