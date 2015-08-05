@@ -39,6 +39,16 @@
 		</div><!-- .entry-content -->
 
 		<div class="author-description">
+			<?php
+					/* translators: used between list items, there is a space after the comma */
+					$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+					if ( $categories_list ):
+				?>
+				<span class="cat-links">
+					<?php printf(strtoupper( __( '%2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
+				</span>
+				<?php endif; // End if categories ?>
+			
 			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
 			<p>This post was written by <?php the_author(); ?></p>
 			<p> <?php get_the_category(); ?></p> 
