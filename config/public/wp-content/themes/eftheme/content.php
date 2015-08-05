@@ -28,7 +28,7 @@
 
 			<?php if ( comments_open() && ! post_password_required() ) : ?>
 			<div class="comments-link">
-				<?php comments_popup_link( '<span class="litwol3 leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
+				<?php comments_popup_link( '<span class="leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
 			</div>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -41,6 +41,7 @@
 		<div class="author-description">
 			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
 			<p>This post was written by <?php the_author(); ?></p>
+			<p> <?php get_the_category(); ?></p> 
 			<p><?php the_author_meta( 'description' ); ?></p>
 			<div class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
