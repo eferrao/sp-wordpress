@@ -40,6 +40,7 @@
 
 		<div class="author-description">
 			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
+			<p>This post was written by <?php the_author(); ?></p>
 			<p><?php the_author_meta( 'description' ); ?></p>
 			<div class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
@@ -47,7 +48,7 @@
 				</a>
 			</div><!-- .author-link	-->
 		</div><!-- .author-description -->
-					
+
 		<footer class="entry-meta">
 			<div class="entry-meta">
 				<?php
