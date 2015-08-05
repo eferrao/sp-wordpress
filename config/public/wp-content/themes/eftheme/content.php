@@ -18,7 +18,7 @@
 					if ( $categories_list ):
 				?>
 				<span class="cat-links">
-					<?php strtoupper(printf( __( '%2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
+					<?php printf(strtoupper( __( '%2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
 				</span>
 				<?php endif; // End if categories ?>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -38,6 +38,16 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 
+		<div class="author-description">
+			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
+			<p><?php the_author_meta( 'description' ); ?></p>
+			<div class="author-link">
+				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+					<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'twentytwelve' ), get_the_author() ); ?>
+				</a>
+			</div><!-- .author-link	-->
+		</div><!-- .author-description -->
+					
 		<footer class="entry-meta">
 			<div class="entry-meta">
 				<?php
