@@ -71,16 +71,16 @@ function wp_about_author_show_blogfeed() {
         $rss_items = $rss->get_items(0, $maxitems);
     }
 
-    if ($maxitems == 0) {
-        $content .= "<p>No Posts</p>";
-    } else {
-        $content .= "<ul>";
-        foreach ($rss_items as $item) {
-            $content .= "<li><a href='" . $item->get_permalink() . "' title='Posted " . $item->get_date('j F Y | g:i a') . "'>" . $item->get_title() . "</a></li>";
-        }
-        $content .= "</ul>";
-        $content .= "<p><a href='" . $rss->get_permalink() . "'>More Posts &raquo;</a></p>";
-    }
+    // if ($maxitems == 0) {
+    //     $content .= "<p>No Posts</p>";
+    // } else {
+    //     $content .= "<ul>";
+    //     foreach ($rss_items as $item) {
+    //         $content .= "<li><a href='" . $item->get_permalink() . "' title='Posted " . $item->get_date('j F Y | g:i a') . "'>" . $item->get_title() . "</a></li>";
+    //     }
+    //     $content .= "</ul>";
+    //     $content .= "<p><a href='" . $rss->get_permalink() . "'>More Posts &raquo;</a></p>";
+    // }
     return wp_about_author_postbox('wp-about-author-blog-rss', 'Tips and Tricks', $content);
 }
 
