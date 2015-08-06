@@ -237,6 +237,10 @@ function add_defaults_wp_about_author($tmp = "") {
     }
 }
 
+
+
+
+
 function wp_about_author_shortcode( ){
 	wp_about_author_display();
 }
