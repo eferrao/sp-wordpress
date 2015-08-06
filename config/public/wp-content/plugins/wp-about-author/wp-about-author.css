@@ -21,12 +21,10 @@
 	padding: 20px;
 }
 .wp-about-author-containter-none{
-	background: #f2f7fc;
 	border-top:none;
 	clear: both;
 	overflow: hidden;
-	padding: 5px 5px 0px 5px;
-	width: 200px; 
+	width: 300px; 
 }
 .wp-about-author-pic{
 	float: left;
