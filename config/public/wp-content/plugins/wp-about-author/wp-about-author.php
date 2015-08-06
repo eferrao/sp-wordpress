@@ -51,9 +51,9 @@ function wp_about_author_display($for_feed = false){
         $wp_about_author_content .= "<p>"  .apply_filters( 'wp_about_author_description', $wp_about_author_author['description']) . "</p>";
         
         // About Author Links
-        if(!empty($wp_about_author_author['posts_url'])){
-            $wp_about_author_links .= "<a href='" . $wp_about_author_author['posts_url']. "' title='More posts by ". $wp_about_author_author['name'] ."'>".apply_filters( 'wp_about_author_more_posts', "More Posts")."</a> ";
-        }
+        // if(!empty($wp_about_author_author['posts_url'])){
+        //     $wp_about_author_links .= "<a href='" . $wp_about_author_author['posts_url']. "' title='More posts by ". $wp_about_author_author['name'] ."'>".apply_filters( 'wp_about_author_more_posts', "More Posts")."</a> ";
+        // }
         if(!empty($wp_about_author_author['website'])){
             if($wp_about_author_links!=""){$wp_about_author_links.=apply_filters( 'wp_about_author_separator', " - ");}
             $wp_about_author_links .= "<a href='" . $wp_about_author_author['website']. "' title='". $wp_about_author_author['name'] ."'>".apply_filters( 'wp_about_author_website', "Website")."</a> ";
@@ -61,19 +61,19 @@ function wp_about_author_display($for_feed = false){
         
         // About Author Social
         $wp_about_author_social .= wp_about_author_get_social_links($wp_about_author_settings);
-        if(isset($wp_about_author_settings['wp_author_social_images']) && $wp_about_author_settings['wp_author_social_images']){
-            $wp_about_author_content .= "<p>"  .$wp_about_author_links . "</p>";
-            if($wp_about_author_social != ""){
-                $wp_about_author_content .= '<p class="wpa-nomargin">'.apply_filters( 'wp_about_author_follow_me', "Follow Me:").'<br />' . $wp_about_author_social.'</p>';
-            }
-        } else {
-            $wp_about_author_content .= "<p class='wpa-nomargin'>";
-            $wp_about_author_content .= $wp_about_author_links;
-            if($wp_about_author_social != ""){
-                $wp_about_author_content .= apply_filters( 'wp_about_author_separator', " - ") . $wp_about_author_social;
-            }
-            $wp_about_author_content .= "</p>";
-        }
+        // if(isset($wp_about_author_settings['wp_author_social_images']) && $wp_about_author_settings['wp_author_social_images']){
+        //     $wp_about_author_content .= "<p>"  .$wp_about_author_links . "</p>";
+        //     if($wp_about_author_social != ""){
+        //         $wp_about_author_content .= '<p class="wpa-nomargin">'.apply_filters( 'wp_about_author_follow_me', "Follow Me:").'<br />' . $wp_about_author_social.'</p>';
+        //     }
+        // } else {
+        //     $wp_about_author_content .= "<p class='wpa-nomargin'>";
+        //     $wp_about_author_content .= $wp_about_author_links;
+        //     if($wp_about_author_social != ""){
+        //         $wp_about_author_content .= apply_filters( 'wp_about_author_separator', " - ") . $wp_about_author_social;
+        //     }
+        //     $wp_about_author_content .= "</p>";
+        // }
 
         // Avatar size and shape
 		$wp_about_author_avatar_class = 'wp-about-author-pic';
