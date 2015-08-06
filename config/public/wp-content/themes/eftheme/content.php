@@ -17,11 +17,11 @@
 					$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
 					if ( $categories_list ):
 				?>
-				<span class="cat-links">
+				<span class="cat-links elifer2">
 					<?php printf(strtoupper( __( '%2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
 				</span>
 				<?php endif; // End if categories ?>
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<h2 class="entry-title elifer"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			</hgroup>
 
 			
@@ -39,16 +39,8 @@
 		</div><!-- .entry-content -->
 
 		<div class="author-description">
-			<?php
-					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
-					if ( $categories_list ):
-				?>
-				<span class="cat-links">
-					<?php printf(strtoupper( __( '%2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list )); ?>
-				</span>
-				<?php endif; // End if categories ?>
-			
+
+
 			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
 			<p>This post was written by <?php the_author(); ?></p>
 			<p> <?php get_the_category(); ?></p> 
