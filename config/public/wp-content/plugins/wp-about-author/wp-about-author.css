@@ -24,9 +24,9 @@
 	background: #f2f7fc;
 	border-top:none;
 	clear: both;
-	margin: 20px 0;
 	overflow: hidden;
-	padding: 20px;
+	padding: 5px 5px 0px 5px;
+	width: 200px; 
 }
 .wp-about-author-pic{
 	float: left;
