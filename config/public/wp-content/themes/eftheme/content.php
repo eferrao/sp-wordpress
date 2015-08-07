@@ -63,6 +63,14 @@
 						get_the_author()
 					);
 				?>
+
+				<?php if ( comments_open() && ! post_password_required() ) : ?>
+				<div class="comments-link">
+					<?php comments_popup_link( '<span class="leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
+				</div>
+				<?php endif; ?>
+				
+				<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-meta -->
 
 
@@ -82,13 +90,7 @@
 				<?php endif; // End if comments_open() ?>
 			</div><!-- .entry-meta -->
 
-			<?php if ( comments_open() && ! post_password_required() ) : ?>
-			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( "Reply", 'twentyeleven' ) . '</span>', _x( '1', 'comments number', 'twentyeleven' ), _x( '%', 'comments number', 'twentyeleven' ) ); ?>
-			</div>
-			<?php endif; ?>
-			
-			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+
 			<hr color="gray" width="100%" height="2px" size="6"> 
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
