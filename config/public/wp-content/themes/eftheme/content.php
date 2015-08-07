@@ -41,8 +41,7 @@
 		<div class="author-description">
 
 
-			<h2><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h2>
-			<p>This post was written by <?php the_author(); ?></p>
+			
 			<p> <?php get_the_category(); ?></p> 
 			<p><?php the_author_meta( 'description' ); ?></p>
 			<div class="author-link">
@@ -67,14 +66,14 @@
 			</div><!-- .entry-meta -->
 			<div class="entry-meta">
 				
-				<?php
+<!-- 				<?php
 					/* translators: used between list items, there is a space after the comma */
 					$tags_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
-					if ( $tags_list ): ?>
-				<span class="tag-links">
+					if ( $tags_list ): ?> -->
+<!-- 				<span class="tag-links">
 					<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-				</span>
-				<?php endif; // End if $tags_list ?>
+				</span> -->
+<!-- 				<?php endif; // End if $tags_list ?> -->
 
 				<?php if ( comments_open() ) : ?>
 				<span class="comments-link"><?php comments_popup_link( '<span class="litwol4 leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?></span>
