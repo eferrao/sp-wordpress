@@ -2683,6 +2683,11 @@ p.comment-form-comment {
 		color: #666;
 	}
 
+	.comments-link {
+		float: right;
+		margin-top: -50px; 
+	}
+
 }
 
 
