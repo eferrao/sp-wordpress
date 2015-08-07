@@ -345,9 +345,7 @@ hr {
 }
 
 /* Text elements */
-p {
-	margin-bottom: 1.625em;
-}
+
 ul, ol {
 	margin: 0 0 1.625em 2.5em;
 }
@@ -720,13 +718,7 @@ a:hover {
 	letter-spacing: 0;
 	text-transform: none;
 }
-.hentry,
-.no-results {
-	border-bottom: 1px solid #ddd;
-	margin: 0 0 1.625em;
-	padding: 0 0 1.625em;
-	position: relative;
-}
+
 .hentry:last-child,
 .no-results {
 	border-bottom: none;
@@ -770,7 +762,7 @@ a:hover {
 }
 .entry-content,
 .entry-summary {
-	padding: 1.625em 0 0;
+
 }
 .entry-content h1,
 .entry-content h2,
