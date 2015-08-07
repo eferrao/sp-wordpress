@@ -44,11 +44,11 @@
 			
 			<p> <?php get_the_category(); ?></p> 
 			<p><?php the_author_meta( 'description' ); ?></p>
-			<div class="author-link">
+<!-- 			<div class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 					<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'twentytwelve' ), get_the_author() ); ?>
 				</a>
-			</div><!-- .author-link	-->
+			</div><!-- .author-link	--> -->
 		</div><!-- .author-description -->
 
 		<footer class="entry-meta">
@@ -56,15 +56,17 @@
 				<?php
 					printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s" rel="author">%6$s</a></span></span>', 'twentyeleven' ),
 						esc_url( get_permalink() ),
-						get_the_date( 'c' ),
-						get_the_date(),
+						// get_the_date( 'c' ),
+						// get_the_date(),
 						esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 						esc_attr( sprintf( __( 'View all posts by %s', 'twentyeleven' ), get_the_author() ) ),
 						get_the_author()
 					);
 				?>
 			</div><!-- .entry-meta -->
-			<div class="entry-meta">
+
+			
+<!-- 			<div class="entry-meta"> -->
 				
 <!-- 				<?php
 					/* translators: used between list items, there is a space after the comma */
@@ -75,10 +77,10 @@
 				</span> -->
 <!-- 				<?php endif; // End if $tags_list ?> -->
 
-				<?php if ( comments_open() ) : ?>
+<!-- 				<?php if ( comments_open() ) : ?>
 				<span class="comments-link"><?php comments_popup_link( '<span class="litwol4 leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?></span>
 				<?php endif; // End if comments_open() ?>
-			</div><!-- .entry-meta -->
+			</div><!-- .entry-meta --> -->
 
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
