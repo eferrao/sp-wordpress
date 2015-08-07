@@ -12,11 +12,11 @@
 	<header class="entry-header elifer5">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+<!-- 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php twentyeleven_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		</div>
+		<?php endif; ?> -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
