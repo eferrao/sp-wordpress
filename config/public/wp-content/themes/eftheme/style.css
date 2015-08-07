@@ -88,7 +88,7 @@ body {
 	width: 100%;
 }
 #content {
-	margin: 0 34% 0 7.6%;
+	margin: 0px auto;
 	width: 58.4%;
 }
 #secondary {
@@ -735,8 +735,6 @@ a:hover {
 	font-size: 26px;
 	font-weight: bold;
 	line-height: 1.5em;
-	padding-bottom: .3em;
-	padding-top: 15px;
 }
 .entry-title,
 .entry-title a {
