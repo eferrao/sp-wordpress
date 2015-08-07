@@ -42,8 +42,8 @@
 
 
 			
-			<p> <?php get_the_category(); ?></p> 
-			<p><?php the_author_meta( 'description' ); ?></p>
+			<!-- <p> <?php get_the_category(); ?></p> 
+			<p><?php the_author_meta( 'description' ); ?></p> -->
 <!-- 			<div class="author-link">
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 					<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'twentytwelve' ), get_the_author() ); ?>
