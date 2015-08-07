@@ -83,6 +83,6 @@
 			</div><!-- .entry-meta -->
 
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-			<hr color="green" width="100%"> 
+			<hr color="gray" width="100%" height="2px" size="6"> 
 		</footer><!-- .entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
