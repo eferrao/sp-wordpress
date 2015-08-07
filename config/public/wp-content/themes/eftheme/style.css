@@ -529,7 +529,7 @@ a:hover {
 }
 #site-title {
 	margin-right: 270px;
-	padding: 3.65625em 0 0;
+	padding: 15px;
 }
 #site-title a {
 	color: #111;
@@ -652,7 +652,7 @@ a:hover {
 #branding #searchform div {
 	margin: 0;
 }
-#branding #s {
+#  #s {
 	float: right;
 	-webkit-transition-duration: 400ms;
 	-webkit-transition-property: width, background;
